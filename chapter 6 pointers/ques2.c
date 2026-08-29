@@ -1,12 +1,12 @@
 #include <stdio.h>
-void PA(int n);
+void PA(int *n);
 int main(){
     int n=4;
-    printf("%p\n",&n);
-    PA(n);
+    PA(&n);
+    printf("%u\n",&n);
     return 0;
 }
 
-void PA(int n){
-    printf("%p\n",&n);
+void PA(int *n){
+    printf("%u\n",n);
 }
